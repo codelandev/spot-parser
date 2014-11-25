@@ -20,7 +20,10 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+Spot::Parser.generate_html(:model_name, some: 'options', with: 'hash')
+# Returns HTML of :model_name
+```
 
 ## Contributing
 
