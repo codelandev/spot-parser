@@ -1,0 +1,33 @@
+div[style="text-align: right"]
+  p
+    img[src="#{extra[:logo]}"]
+
+p #{extra[:city]} (#{extra[:coligada]}) #{extra[:date]}
+
+p Ao
+p WalMart Brasil Ltda.
+
+p Av. dos Autonomistas, n° 1828, Osasco/São Paulo
+
+p Loja
+p = promoter.name
+p = promoter.address
+
+p Prezados Senhores,
+
+p 
+  | #{store.name}, com sede na #{store.address} inscrito no CNPJ/MF sob n° #{store.cpnj} 
+  strong I.E
+  | #{store.ie} declara para os devidos fins que o(a) Sr(a) #{promoter.name}, #{promoter.civil_state}, #{promoter.nationality}, portador (a) da cédula de identidade RG n° #{promoter.rg} e da CTPS nº #{promoter.ctps} Série #{promoter.ctps_serie} é funcionário desta e será deslocado para atuação nessa loja na condição de ATIVIDADE, dos produtos #{extra[:product]} visando a #{extra[:product_activity]}, conforme o disposto no Acordo Comercial assinado com V. Sas., tanto no estoque quanto na área de vendas da loja.
+p Declaro que o(a) Sr(a) #{promoter.name} é funcionário devidamente registrado, não possuindo antecedentes criminais ou fatos desabonadores, e que todas as obrigações trabalhistas e previdenciárias do(a) mesmo(a) são devidamente cumpridas. Comprometo-me a apresentar, a cada seis meses, uma nova declaração nestes termos, a carteira de trabalho do funcionário, bem como uma cópia das guias de recolhimento dos encargos referentes ao Fundo de Garantia por Tempo de Serviço (FGTS - extrato simples fornecido pela CEF) e ao Instituto Nacional de Seguro Social (INSS-CND) devidamente  quitadas. Estou ciente de que, caso as obrigações acima não sejam cumpridas, o acesso do promotor à Loja Será impedido até que sejam sanadas as irregularidades encontradas.
+p Declaro também estar ciente de que não existe vínculo empregatício entre o(a) referido (a) funcionário (a) e #{store.name}, obrigando-me a assumir quaisquer atos ou omissões do(a) referido (a) funcionário (a), ficando obrigada a ressarcir o #{store.name} por qualquer prejuízo sofrido em decorrência dos produtos e/ou da conduta do(a) referido(a) funcionário.
+p Esta declaração terá validade pelo prazo de 6 meses e prevalecerá sobre o Acordo Comercial assinado por mim junto a esta empresa. O Acordo Comercial, contudo, deverá ser aplicado subsidiariamente para as condições não previstas nesta declaração.
+p Atenciosamente,
+br
+br
+br
+br
+br
+br
+.footer
+  p #{store.name}, #{store.address}, #{store.email}

@@ -1,0 +1,75 @@
+p[style="text-align: center"]
+  img[src="#{extra[:logo]}"]
+
+p = extra[:rede]
+p = extra[:bandeira]
+p = extra[:loja]
+p = extra[:loja_endereco]
+p #{extra[:loja_cidade]}/#{extra[:loja_uf]}
+
+div[style="text-align: center"]
+  p
+    strong CONDUTAS E PROCEDIMENTOS PARA PROMOTORES
+
+ol
+  li
+    p
+      strong APRESENTAÇÃO
+      | : a entrada de promotores só será permitida se houver a carta de apresentação da empresa, fornecedor ou empresa prestadora de serviço se responsabilizando pelos aspectos trabalhistas, e também com a aprovação do gerente do setor.
+    ul
+      li É estritamente proibido apresentar-se alcoolizado ou fazer uso de bebidas alcoólicas no horário de trabalho ou descanso;
+      li O avental deverá estar sempre limpo e fechado durante o expediente de trabalho;
+      li As exceções do uso do avental serão controladas pelo gerente responsável;
+      li É proibido o uso de celular no interior da loja;
+  li
+    p
+      strong ESTACIONAMENTO
+      | : todos os promotores da loja deverão deixar seus veículos, em lugar reservado para os mesmos, sendo que as vagas da frente da loja são destinadas aos clientes.
+  li
+    p
+      strong ENTRADA 
+        | : todos os promotores deverão entrar e serem identificados na portaria de associados, apresentando seus pertences para serem guardados e/ou etiquetados apresentação dos mesmos acarreta na apreensão do pertence na sua saída.
+  li
+    p
+      strong SAÍDA
+        | : todos os promotores da loja deverão sair pela portaria de associados, lembrando que a saída da frente da loja só deverá ser usada por ciente promotor deverão apresentar seus pertences na portaria de associados e passar pela revista pessol.
+  li
+    p
+      strong CRACHÁ
+        | : é obrigatório o uso de crachá nas dependências da loja devendo ser utilizado na altura do peito. Os promotores fixos deverão providenciar o crachá do depto de RH. Em caso de extravio o promotor deverá comunicar imediatamente ao setor de Loss Prevention. A perda do crachá implicará em multa de R$ 10,00.
+  li
+    p
+      strong PRAÇA DE ALIMENTAÇÃO
+        | : é expressamente proibido ir para praça de alimentação para fazer refeições em horário de trabalho , para uso da praça de alimentação o promotor deverá pegar assinaturas do gerente do setor no controle de saída, passar pela portaria de associados e deixar o crachá do Wal Mart, dar a volta e  entrar pela entrada principal.
+  li
+    p
+      strong DEGUSTAÇÃO
+        | : não e permitido a degustação de nenhum produto de demonstração e/ou qualquer produto que seja pertencente a loja pelo promotor.
+  li
+    p
+      strong PASSAGEM PELOS CAIXAS
+        | : é expressamente proibida a passagem entre os caixas, o promotor deve utilizar a passagem destinada aos clientes que fica na região central da loja.
+  li
+    p
+      strong APRESENTAÇAO PESSOAL
+        | : é expressamente proibido trabalhar com a barriga de fora, piercing, tatuagens descobertas, sapatos abertos e roupas muito curtas. OBS: este item será anulado caso a promoção ou evento necessite, caso contrário será terminantemente proibido.
+p = "#{extra[:city]}, #{extra[:date]}"
+p
+  | Nome do promotor(a): 
+  strong = promoter.name
+  |  RG
+  strong = promoter.rg
+
+p
+  | Ass: 
+  u &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+p Loss Prevention:
+p
+  | Ass: 
+  u &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+p Nome da empresa: SPOT MARKETING PROMOCIONAL
+p
+  | Ass: 
+  u &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
