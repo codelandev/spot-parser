@@ -6,10 +6,10 @@ require 'spot/parser/version'
 Gem::Specification.new do |spec|
   spec.name          = 'spot-parser'
   spec.version       = Spot::Parser::VERSION
-  spec.authors       = ['Sérgio Schnorr Júnior']
-  spec.email         = ['jr.schnorr@gmail.com']
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.authors       = ['Sérgio Schnorr Júnior', 'Codeland']
+  spec.email         = ['jr.schnorr@gmail.com', 'contato@codeland.com.br']
+  spec.summary       = %q{Geração de templates para Spot}
+  spec.description   = %q{Geração de templates HTML para a Spot}
   spec.homepage      = ''
   spec.license       = 'MIT'
 
