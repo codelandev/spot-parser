@@ -1,0 +1,41 @@
+div[style="width: 33%"]
+  p = extra[:date]
+  p A
+  p = extra[:rede]
+  p = extra[:bandeira]
+  p = extra[:loja]
+  p = extra[:loja_endereco]
+  p = "#{extra[:loja_cidade]} - #{extra[:loja_uf]}"
+
+div[style="width: 33%"]
+  p
+    img[src="#{extra[:logo]}"]
+
+p A/C PREVENÇÃO DE PERDAS
+p REF: APRESENTAÇÃO DE PROMOTOR
+
+p
+  | Apresentamos o nosso (a) funcionário (a) Sr.(a) 
+  strong = promoter.name
+  | , RG 
+  strong = promoter.rg
+  | , CTPS 
+  strong = promoter.ctps
+  | , SÉRIE 
+  strong = "#{promoter.ctps_serie}/#{promoter.ctps_uf}"
+  | , irá realizar atividades ligadas a promoção DE PRODUTOS 
+  strong = store.name 
+  | , residente #{store.address} – #{store.city}/#{store.uf}, que a partir desta data estará exercendo as funções de promotor(a) nesta loja, 
+  strong no período de #{extra[:start_date]} a #{extra[:end_date]}
+  | , com visitas semanais para abastecer os produtos da Empresa 
+  strong = store.name
+  |  sob nossa inteira responsabilidade trabalhista.
+
+p Esclarecemos que o (a) mesmo (a) já foi orientado de observar e cumprir todas as normas internas do hipermercado. Solicitamos que qualquer problema com o (a) funcionário (a), seja comunicado ao Sr. #{extra[:responsavel]}, pelo telefone #{extra[:telefone_responsavel]} para que sejam tomadas as devidas providencias.
+
+p Sem mais para o momento, agradecemos.
+
+div[style="width: 50%"]
+  hr
+  p
+    strong SPOT PROMO
