@@ -1,0 +1,52 @@
+div[style="float: right"]
+  img[src="#{extra[:logo]}"]
+
+p = extra[:date]
+
+p AO
+p = extra[:rede]
+p = extra[:bandeira]
+p = extra[:loja]
+p = extra[:loja_endereco]
+p = "#{extra[:loja_cidade]} - #{extra[:loja_uf]}"
+
+p
+  | Pelo presente, informamos que a partir desta data, 
+  strong promoter.name
+  | , nosso funcionário desde 
+  strong = promoter.start_date
+  | , RG 
+  strong = promoter.rg
+  | , CTPS 
+  strong = promoter.ctps
+  | , SÉRIE –
+  strong = " #{promoter.ctps_serie}/#{promoter.ctps_uf}"
+  | , irá realizar atividades ligadas à promoção da #{store.name} em sua loja, portanto estamos passando abaixo para seu conhecimento as suas atividades.
+p Informamos que esta carta tem validade de 1#{extra[:start_date]}à d#{extra[:end_date]}.
+
+ol
+  li ATENDIMENTO AO CLIENTE
+  li ARRUMAR GÔNDULAS
+  li RECOLHER PRODUTOS SEM CONDIÇÕES DE VENDA
+  li VERIFICAR FALTA
+  li UTILIZAR CORRETAMENTE CARRO HIDRÁULICO
+  li PREPARAR O PALLET OU CARRO DE REPOSIÇÃO
+  li POSICIONAR MERCADORIAS NOS CORREDORES
+  li ABRIR CORRETAMENTE CAIXAS DE PAPELÃO
+  li MARCAR PREÇO
+  li REABASTECER GÔNDOLAS
+  li RECOLHER, DESMONTAR E COMPACTAR CAIXAS E EMBALAGENS PERDIDAS.
+  li ASSEGURAR-SE DA QUALIDADE DA APRESENTAÇÃO 
+  li RETIRAR AS MERCADORIAS LIBERADAS DA RECEPÇAO E ORGANIZÁ-LAS NO DEPÓSITO
+  li MANTER A LIMPEZA DO SEU LOCAL DE TRABALHO
+  li ARRUMAR AS MERCADORIAS PARA INVENTÁRIO.
+
+p Informamos que o (a) mesmo (a) não possui nenhum vínculo empregatício com vosso estabelecimento, cabendo a nós a responsabilidade por qualquer custo empregatício ou securitário. 
+p Comunicamos também que serão de nossa responsabilidade todos os atos praticados por ele (a) em seu estabelecimento, bem como o ressarcimento de eventuais prejuízos por ele (a) ocasionados.
+
+p ATENCIOSAMENTE,
+
+div[style="width: 40%"]
+  hr
+  p
+    strong SPOT MARKETING PROMOCIONAL LTDA
