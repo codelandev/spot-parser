@@ -1,0 +1,38 @@
+p = extra[:date]
+
+p
+  strong Ao 
+
+p
+  strong Sonda Supermercados.
+
+p
+  strong Apresentação de Promotor
+
+p
+  | Apresentamos o(a) promotor(a), RE 
+  strong = promoter.re
+  | , 
+  strong = promoter.name
+  | , residente na #{promoter.address} – Nº #{promoter.address_number}, portador do RG 
+  strong = promoter.rg
+  | , CPF 
+  strong = promoter.cpf
+  | , que a partir desta data, estará exercendo a função de promotor(a) da empresa 
+  strong = extra[:company_name]
+  | . nesta loja sob nossa responsabilidade trabalhista.
+
+p Esclarecemos que o mesmo já foi orientado a observar e cumprir todas as normas internas da empresa.
+
+p Assumimos total responsabilidade por esta designação notadamente quanto ao cumprimento da legislação trabalhista, previdenciária e securitária, eximindo V.Sa.
+
+p
+  | Solicitamos que qualquer problema com nosso funcionário seja comunicado ao Sr(a) 
+  strong = extra[:coordenador]
+  |  pelo telefone #{extra[:coordenador_telefone]}, para que sejam tomadas as devidas providências. 
+
+p Atenciosamente,
+
+p
+  strong SPOT MARKETING PROMOCIONAL LTDA.
+hr[width="50%"]
