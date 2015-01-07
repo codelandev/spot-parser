@@ -1,0 +1,44 @@
+div[style="text-align: center"]
+  p
+    img[src="#{extra[:logo]}"]
+
+p = extra[:date]
+
+p
+  strong Ao 
+
+p = extra[:rede]
+p = extra[:bandeira]
+p = extra[:loja]
+p = extra[:loja_address]
+p = "#{extra[:loja_city]} - #{extra[:loja_uf]}"
+
+
+p
+  | Pela presente, 
+  strong = promoter.name
+  | , nosso funcionário desde #{extra[:initial_date]}, RG 
+  strong = promoter.rg
+  | , CTPS: 
+  strong = promoter.ctps
+  | , SÉRIE: 
+  strong = "#{promoter.ctps_serie}/#{promoter.ctps_serie_uf}"
+  | , irá realizar atividades ligadas à reposição dos produtos das empresas 
+  strong = extra[:company_name]
+  | em sua loja, em período indeterminado. Informamos que o mesmo não possui vínculo empregatício com vosso estabelecimento, cabendo a nós a responsabilidade por qualquer custo empregatício ou securitário.
+
+p Declaramos que foi fornecido o equipamento de segurança EPI – BOTA BICO DE AÇO código: #{extra[:epi_code]} – numeração #{extra[:epi_number]}.
+
+p Responsabilizamo-nos por quaisquer possíveis ocorrências dentro do estabelecimento pertinentes a acidente de trabalho.
+
+p Serão de nossa inteira responsabilidade todos os atos praticados por ele em seu estabelecimento bem como ressarcimento de eventuais prejuízos por ele ocasionados. Esclarecendo que o mesmo já foi orientado no sentido de observar e cumprir todas as normas internas do hipermercado. Solicitamos que qualquer problema com o funcionário, seja comunicado ao #{extra[:coordenador]}, pelo telefone #{extra[:coordenador_phone]} para seja tomadas as devidas providências. Outro assim cumpre-nos estabelecer que toda a responsabilidade civil e código do consumidor, ficarão a nosso encargo.
+
+p Atenciosamente,
+
+div[style="text-align: center"]
+  div[style="width: 45%"]
+    hr
+    p = extra[:coordenador]
+  div[style="width: 45%; margin-left: 10%"]
+    hr
+    p = promoter.name

@@ -1,0 +1,38 @@
+div[style="text-align: center"]
+  p
+    img[src="#{extra[:logo]}"]
+
+p[style="text-align: right"] = extra[:date]
+
+p
+  strong Ao 
+
+p = extra[:rede]
+p = extra[:bandeira]
+p = extra[:loja]
+p = extra[:loja_address]
+p = "#{extra[:loja_city]} - #{extra[:loja_uf]}"
+
+
+p
+  | PELA PRESENTE, INFORMAMOS QUE A PARTIR DESTA DATA NOSSO FUNCIONÁRIO, 
+  strong = promoter.name
+  | , RG 
+  strong = promoter.rg
+  | , CTPS 
+  strong = promoter.ctps
+  | , SÉRIE 
+  strong = "#{promoter.ctps_serie}/#{promoter.ctps_uf}
+  | , IRÁ REALIZAR ATIVIDADES LIGADAS A PROMOÇÃO #{extra[:activity]}, SENDO DE NOSSA INTEIRA RESPONSABILIDADE TODOS OS ATOS PRATICADOS POR ELE EM SEU ESTABELECIMENTO, BEM COMO RESSARCIMENTO DE EVENTUAIS PREJUÍZOS POR ELE OCASIONADOS.
+
+p ESCLARECEMOS AINDA, QUE ESTE FUNCIONÁRIO É DE NOSSA INTEIRA RESPONSÁBILIDADE CIVIL, TRABALHISTA E PREVIDENCIÁRIA, INCLUSIVE NO QUE SE REFERE AOS RECOLHIMENTOS DOS ENCARGOS SOCIAIS, (INSS E FGTS) E ANOTAÇÃO NO CONTRATO DE TRABALHO NA CTPS.
+
+p ATENCIOSAMENTE,
+
+div[style="text-align: center"]
+  div[style="width: 45%"]
+    hr
+    p = extra[:coordenador]
+  div[style="width: 45%; margin-left: 10%"]
+    hr
+    p = promoter.name

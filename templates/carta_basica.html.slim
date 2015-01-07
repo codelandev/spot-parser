@@ -1,0 +1,57 @@
+div[style="text-align: center"]
+  p
+    img[src="#{extra[:logo]}"]
+
+p = extra[:date]
+
+p
+  strong Ao 
+
+p = extra[:rede]
+p = extra[:bandeira]
+p = extra[:loja]
+p = extra[:loja_address]
+p = "#{extra[:loja_city]} - #{extra[:loja_uf]}"
+
+
+p
+  | Pela presente, 
+  strong = promoter.name
+  | , RG 
+  strong = promoter.rg
+  | , CTPS: 
+  strong = promoter.ctps
+  | , SÉRIE: 
+  strong = "#{promoter.ctps_serie}/#{promoter.ctps_serie_uf}"
+  | , irá realizar atividades ligadas à reposição dos produtos das empresas 
+  strong = extra[:company_name]
+  |  em sua loja, em período indeterminado. Informamos que o mesmo não possui vínculo empregatício com vosso estabelecimento, cabendo a nós a responsabilidade por qualquer custo empregatício ou securitário. Abaixo para o seu conhecimento, as suas atividades:
+
+ol
+  li Atendimento ao cliente;
+  li Arrumar as gôndolas;
+  li Recolher produtos sem condições de venda;
+  li Verificar as faltas;
+  li Utilizar corretamente um carro hidráulico;
+  li Preparar um palette (ou carro de reposição);
+  li Posicionar mercadorias nos corredores;
+  li Abrir corretamente caixas de papelão;
+  li Reabastecer as gôndolas;
+  li Recolher, desmontar e compactar embalagens perdidas;
+  li Assegurar-se da qualidade da apresentação;
+  li Retirar as mercadorias liberadas da recepção e organizá-las no depósito;
+  li Manter a limpeza do seu local de trabalho;
+  li Arrumar as mercadorias para inventário.
+  li Marcar Preço
+
+p Serão de nossa inteira responsabilidade todos os atos praticados por ele em seu estabelecimento bem como ressarcimento de eventuais prejuízos por ele ocasionados. Esclarecendo que o mesmo já foi orientado no sentido de observar e cumprir todas as normas internas do hipermercado. Solicitamos que qualquer problema com o funcionário, seja comunicado ao #{extra[:coordenador]}, pelo telefone #{extra[:coordenador_phone]} para sejam tomadas as devidas providências. Outro assim, cumpre-nos estabelecer que toda a responsabilidade civil e código do consumidor, ficarão a nosso encargo.
+
+p Atenciosamente,
+
+div[style="text-align: center"]
+  div[style="width: 45%"]
+    hr
+    p = extra[:coordenador]
+  div[style="width: 45%; margin-left: 10%"]
+    hr
+    p = promoter.name
