@@ -9,7 +9,7 @@ p
 
 p = extra[:rede]
 p = extra[:bandeira]
-p = store.name
+p = store.corporate_name
 p = store.address
 p = "#{store.city} - #{store.uf}"
 
@@ -20,9 +20,9 @@ p
   | , nosso funcionário desde #{extra[:initial_date]}, RG 
   strong = promoter.rg
   | , CTPS: 
-  strong = promoter.ctps
+  strong = promoter.work_id
   | , SÉRIE: 
-  strong = "#{promoter.ctps_serie}/#{promoter.ctps_serie_uf}"
+  strong = "#{promoter.work_serial}/#{promoter.work_uf}"
   | , irá realizar atividades ligadas à reposição dos produtos das empresas 
   strong = extra[:company_name]
   | em sua loja, em período indeterminado. Informamos que o mesmo não possui vínculo empregatício com vosso estabelecimento, cabendo a nós a responsabilidade por qualquer custo empregatício ou securitário.

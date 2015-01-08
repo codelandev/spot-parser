@@ -3,7 +3,7 @@ div[style="width: 33%"]
   p A
   p = extra[:rede]
   p = extra[:bandeira]
-  p = store.name
+  p = store.corporate_name
   p = store.address
   p = "#{store.city} - #{store.uf}"
 
@@ -20,9 +20,9 @@ p
   | , RG 
   strong = promoter.rg
   | , CTPS 
-  strong = promoter.ctps
+  strong = promoter.work_id
   | , SÉRIE 
-  strong = "#{promoter.ctps_serie}/#{promoter.ctps_uf}"
+  strong = "#{promoter.work_serial}/#{promoter.work_uf}"
   | , irá realizar atividades ligadas a promoção DE PRODUTOS 
   strong = store.name 
   | , residente #{store.address} – #{store.city}/#{store.uf}, que a partir desta data estará exercendo as funções de promotor(a) nesta loja, 

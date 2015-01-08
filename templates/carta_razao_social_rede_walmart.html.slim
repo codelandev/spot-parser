@@ -9,7 +9,7 @@ p
 
 p = extra[:rede]
 p = extra[:bandeira]
-p = store.name
+p = store.corporate_name
 p = store.address
 p = "#{store.city} - #{store.uf}"
 
@@ -25,7 +25,7 @@ p
   strong = promoter.name
   | portador da cédula de identidade RG número 
   strong = promoter.rg
-  | , da CTPS número #{promoter.ctps} - série #{promoter.ctps_serie}/#{promoter.ctps_uf}, é funcionário desta e será deslocado para atuação nessa loja na condição de #{extra[:position]} no período de #{extra[:start_date]} a #{extra[:end_date]}, visando a manutenção e abastecimento dos produtos fornecidos, conforme o disposto no Acordo Comercial assinado com V.Sa., tanto no estoque quanto na área de vendas da loja.
+  | , da CTPS número #{promoter.work_id} - série #{promoter.work_serial}/#{promoter.work_uf}, é funcionário desta e será deslocado para atuação nessa loja na condição de #{extra[:position]} no período de #{extra[:start_date]} a #{extra[:end_date]}, visando a manutenção e abastecimento dos produtos fornecidos, conforme o disposto no Acordo Comercial assinado com V.Sa., tanto no estoque quanto na área de vendas da loja.
 
 p 
   | Declaramos que o Sr. 
