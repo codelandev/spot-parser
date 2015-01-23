@@ -26,9 +26,9 @@ p
   | , Série 
   strong = "#{promoter.work_serial}/#{promoter.work_uf}
   |, PIS n° 
-  strong = promoter.pis
-  |, data de admissão de #{extra[:admission]}, RE (Registro de Empregado) nº #{promoter.re}. Endereço residencial: 
-  strong = "#{promoter.address} – #{promoter.address_number} - #{promoter.bairro} – #{promoter.city}/#{promoter.uf}, é nosso funcionário prestando serviços à empresa 
+  strong = extra[:pis]
+  |, data de admissão de #{extra[:admission]}, RE (Registro de Empregado) nº #{extra[:registro_emprego]}. Endereço residencial: 
+  strong = "#{extra[:address]} – #{extra[:address_number]} - #{extra[:neighborhood} – #{promoter.city}/#{promoter.uf}, é nosso funcionário prestando serviços à empresa 
   strong = extra[:cliente]
   |  exercendo a função de #{extra[:cargo]}, nesta loja no horário de #{extra[:start_hour]} a #{extra[:end_hour]} horas no período indeterminado, de segunda a sábado.
 
