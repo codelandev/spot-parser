@@ -15,10 +15,10 @@ p
   | o compromisso de prestar serviços para a empresa tomadora de serviços denominada 
   strong = promoter.name
   | , situada a 
-  strong = promoter.address
+  strong = extra[:address]
   | , onde exercerá a função de 
   strong = extra[:cargo]
-  | com o salário de #{extra[:salario]} por mês.
+  |  com o salário de #{extra[:salario]} por mês.
 
 ol
   li
@@ -101,6 +101,7 @@ div[style="width: 32%; text-align: center; float:left"]
   p
     strong SPOT TRABALHO TEMPORÁRIO LTDA
 div[style="width: 32%; margin-left: 2%; margin-right: 2%; text-align: center; float:left"]
+  p
 div[style="width: 32%; text-align: center; float:left"]
   hr
   p

@@ -24,11 +24,11 @@ p
   | , CTPS nº 
   strong = promoter.work_id
   | , Série 
-  strong = "#{promoter.work_serial}/#{promoter.work_uf}
+  strong = "#{promoter.work_serial}/#{promoter.work_uf}"
   |, PIS n° 
   strong = extra[:pis]
   |, data de admissão de #{extra[:admission]}, RE (Registro de Empregado) nº #{extra[:registro_emprego]}. Endereço residencial: 
-  strong = "#{extra[:address]} – #{extra[:address_number]} - #{extra[:neighborhood} – #{promoter.city}/#{promoter.uf}, é nosso funcionário prestando serviços à empresa 
+  strong = "#{extra[:address]} – #{extra[:address_number]} - #{extra[:neighborhood]} – #{promoter.city}/#{promoter.uf}, é nosso funcionário prestando serviços à empresa "
   strong = extra[:cliente]
   |  exercendo a função de #{extra[:cargo]}, nesta loja no horário de #{extra[:start_hour]} a #{extra[:end_hour]} horas no período indeterminado, de segunda a sábado.
 
@@ -43,4 +43,5 @@ p Atenciosamente,
 
 p
   strong SPOT MARKETING PROMOCIONAL LTDA.
-hr[width="50%"]
+div[style="width: 50%"]
+  hr

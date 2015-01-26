@@ -22,7 +22,7 @@ p
   | , CTPS 
   strong = promoter.work_id
   | , SÉRIE 
-  strong = "#{promoter.work_serial}/#{promoter.work_uf}
+  strong = "#{promoter.work_serial}/#{promoter.work_uf}"
   | , IRÁ REALIZAR ATIVIDADES LIGADAS A PROMOÇÃO #{extra[:activity]}, SENDO DE NOSSA INTEIRA RESPONSABILIDADE TODOS OS ATOS PRATICADOS POR ELE EM SEU ESTABELECIMENTO, BEM COMO RESSARCIMENTO DE EVENTUAIS PREJUÍZOS POR ELE OCASIONADOS.
 
 p ESCLARECEMOS AINDA, QUE ESTE FUNCIONÁRIO É DE NOSSA INTEIRA RESPONSÁBILIDADE CIVIL, TRABALHISTA E PREVIDENCIÁRIA, INCLUSIVE NO QUE SE REFERE AOS RECOLHIMENTOS DOS ENCARGOS SOCIAIS, (INSS E FGTS) E ANOTAÇÃO NO CONTRATO DE TRABALHO NA CTPS.
@@ -30,9 +30,9 @@ p ESCLARECEMOS AINDA, QUE ESTE FUNCIONÁRIO É DE NOSSA INTEIRA RESPONSÁBILIDAD
 p ATENCIOSAMENTE,
 
 div[style="text-align: center"]
-  div[style="width: 45%"]
+  div[style="width: 45%; float: left"]
     hr
     p = extra[:coordenador]
-  div[style="width: 45%; margin-left: 10%"]
+  div[style="width: 45%; margin-left: 10%; float: left"]
     hr
     p = promoter.name

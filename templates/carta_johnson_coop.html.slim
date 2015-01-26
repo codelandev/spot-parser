@@ -22,8 +22,8 @@ p
   | , CTPS nº 
   strong = promoter.work_id
   |, Série 
-  strong = "#{promoter.work_serial}/#{promoter.work_uf}
-  | , portador(a) do RG #{promoter.rg}, Registro de Empregado nº #{promoter.re}, funcionário(a) da Empresa 
+  strong = "#{promoter.work_serial}/#{promoter.work_uf}"
+  | , portador(a) do RG #{promoter.rg}, Registro de Empregado nº #{extra[:registro_emprego]}, funcionário(a) da Empresa 
   strong SPOT MARKETING PROMOCIONAL LTDA
   | . prestará serviços de reposição de nossos produtos por período indeterminado, sendo que todos os encargos trabalhistas e vínculos empregaticios são de responsabilidade da 
   strong SPOT MARKETING PROMOCIONAL LTDA.
@@ -37,7 +37,8 @@ p
 
 p Atenciosamente,
 
-hr[width="50%"]
+div[style="width: 50%"]
+  hr
 p
   strong Johnson & Johnson Comércio e Distribuição Ltda.
 
