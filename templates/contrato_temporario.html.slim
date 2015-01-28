@@ -5,8 +5,8 @@ div[style="text-align: center"]
 
 p
   | Pelo presente Contrato de Trabalho Temporário consoante dispositivo constantes na Lei 6019/74 que entre se fazem, de um lado 
-  strong SPOT TRABALHO TEMPORÁRIO LTDA
-  | . Empresa de trabalho temporário, inscrita no CNPJ nº 05.740.685/0001-26, doravante denominada PRESTADORA, e de outro lado #{extra[:name]} CTPS #{extra[:ctps]} Série #{extra[:ctps_serie]} #{extra[:ctps_state]} qualidade de Trabalhador(a), Doravante denominado(a) TEMPORÁRIO(a), as partes convencionam as cláusulas a seguir descritas:
+  strong = store.corporate_name
+  | . Empresa de trabalho temporário, inscrita no CNPJ nº #{store.cnpj}, doravante denominada PRESTADORA, e de outro lado #{extra[:name]} CTPS #{promoter.work_id} Série #{promoter.work_serial} #{promoter.work_uf} qualidade de Trabalhador(a), Doravante denominado(a) TEMPORÁRIO(a), as partes convencionam as cláusulas a seguir descritas:
 p 
   | O (a) 
   strong temporário (a) 
@@ -99,7 +99,7 @@ p
 div[style="width: 32%; text-align: center; float:left"]
   hr
   p
-    strong SPOT TRABALHO TEMPORÁRIO LTDA
+    strong = store.corporate_name
 div[style="width: 32%; margin-left: 2%; margin-right: 2%; text-align: center; float:left"]
   p
 div[style="width: 32%; text-align: center; float:left"]

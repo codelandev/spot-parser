@@ -25,16 +25,17 @@ p
   strong = promoter.work_id
   | , Série 
   strong = "#{promoter.work_serial}/#{promoter.work_uf}"
-  |, PIS n° 
+  | , PIS n° 
   strong = extra[:pis]
   |, data de admissão de #{extra[:admission]}, RE (Registro de Empregado) nº #{extra[:registro_emprego]}. Endereço residencial: 
-  strong = "#{extra[:address]} – #{extra[:address_number]} - #{extra[:neighborhood]} – #{promoter.city}/#{promoter.uf}, é nosso funcionário prestando serviços à empresa "
+  strong = "#{extra[:address]} – #{extra[:address_number]} - #{extra[:neighborhood]} – #{promoter.city}/#{promoter.uf}"
+  | , é nosso funcionário prestando serviços à empresa 
   strong = extra[:cliente]
   |  exercendo a função de #{extra[:cargo]}, nesta loja no horário de #{extra[:start_hour]} a #{extra[:end_hour]} horas no período indeterminado, de segunda a sábado.
 
 p 
   | Declaramos, outros sim, que o(a) referido(a) funcionário(a) não possui vínculo empregatício com o 
-  strong Andorinha Supermercado Ltda.
+  strong store.fantasy_name 
   | , sendo de nossa inteira responsabilidade todos os encargos trabalhistas, previdenciários ou qualquer outro tipo, que por ventura exista.
 
 p Esclarecemos tê-lo(a) orientado, no sentido de observar e cumprir as normas de condutas internas da loja e solicitamos ser informados de qualquer ocorrência ou problemas através do telefone: #{extra[:phone]} com o Sr(a) #{extra[:coordenador]}, para que sejam tomadas as providencias cabíveis, desde já agradecemos.

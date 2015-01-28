@@ -1,12 +1,12 @@
-p São Paulo, #{extra[:date]}
+p #{extra[:city]}, #{extra[:date]}
 
-p AO TENDA
-p #{extra[:city_of_store]}
+p Ao #{store.fantasy_name}
+p #{store.city]}
 
 p
   strong
     | Att.: 
-    u Setor de Segurança Patrimonial
+    u = extra[:setor] 
 
 p Prezados Senhores,
 
@@ -30,7 +30,7 @@ ul
   li Deve ser apresentado na portaria para registro quando da entrada em serviço objetos que eventualmente possam gerar dúvidas quanto a sua propriedade.
   li O uniforme de trabalho quando não for jaleco branco deverá obrigatoriamente constar o nome, marca e/ou logotipo do fornecedor.
 
-p E por fim, eu empresa citada acima, comprometo-me em informar ao Departamento Pessoal do Tenda Atacado tel: #{extra[:phone]}, no prazo de quarenta e oito horas (48h) se o funcionário for demitido ou tenha alterado seu itinerário.
+p E por fim, eu empresa citada acima, comprometo-me em informar ao Departamento Pessoal do #{store.fantasy_name} tel: #{extra[:phone]}, no prazo de quarenta e oito horas (48h) se o funcionário for demitido ou tenha alterado seu itinerário.
 
 p Atenciosamente,
 

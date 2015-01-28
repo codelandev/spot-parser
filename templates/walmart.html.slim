@@ -5,9 +5,9 @@ div[style="text-align: right"]
 p #{extra[:city]} (#{extra[:coligada]}) #{extra[:date]}
 
 p Ao
-p WalMart Brasil Ltda.
+p = store.corporate_name
 
-p Av. dos Autonomistas, n° 1828, Osasco/São Paulo
+p = "#{store.address}, nº #{store.number}#{", #{store.complement}" if store.complement}, #{store.city}/#{store.uf}"
 
 p Loja
 p = store.fantasy_name
