@@ -661,9 +661,9 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
     td.xl73 colspan="2" style=("border-right:1.0pt solid black")
       | Sim
       span style="mso-spacerun:yes"  &nbsp;
-    td.xl122 style="border-left:none"  &nbsp;
+    td.xl122[style="border-left:none"] = 'X' if extra[:trabalhou_infoco] == true
     td.xl72 colspan="2" style=("border-right:1.0pt solid black;border-left: none")  Não
-    td.xl122 style="border-left:none"  &nbsp;
+    td.xl122[style="border-left:none"] = 'X' if extra[:trabalhou_infoco] == false
     td.xl77
     td.xl77
     td.xl77
@@ -731,12 +731,7 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
     td.xl77
     td.xl77
     td.xl120 colspan="9"  Se Sim, período do último trabalho
-    td.xl81 &nbsp;
-    td.xl81 &nbsp;
-    td.xl81 &nbsp;
-    td.xl81 &nbsp;
-    td.xl81 &nbsp;
-    td.xl81 &nbsp;
+    td.xl81[colspan="6"] == "#{extra[:period]} &nbsp;"
     td.xl93 &nbsp;
     td.xl77
   tr height="17" style="height:17.0pt"
@@ -861,7 +856,7 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
     td.xl77
   tr.xl77 height="21" style="mso-height-source:userset;height:21.0pt"
     td.xl72 colspan="6" height="21" style="height:21.0pt"  Nome Completo:
-    td.xl81 colspan="30"  &nbsp;
+    td.xl81[colspan="30"] == extra[:nome_completo] ? extra[:nome_completo] : "&nbsp;"
     td.xl79 &nbsp;
     td.xl77
   tr.xl77 height="21" style="mso-height-source:userset;height:21.0pt"
@@ -876,7 +871,7 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
       span style="mso-spacerun:yes"  &nbsp;
     td.xl77
       span style="mso-spacerun:yes"  &nbsp;
-    td.xl117 colspan="30"  &nbsp;
+    td.xl117[colspan="30"] == extra[:nome_completo_2] ? extra[:nome_completo_2] : "&nbsp;"
     td.xl79 &nbsp;
     td.xl77
   tr.xl77 height="10" style="mso-height-source:userset;height:10.5pt"
@@ -920,7 +915,7 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
     td.xl77
   tr.xl77 height="21" style="mso-height-source:userset;height:21.0pt"
     td.xl72 colspan="6" height="21" style="height:21.0pt"  Endereço:
-    td.xl81 colspan="30"  &nbsp;
+    td.xl81[colspan="30"] == extra[:endereco] ? extra[:endereco] : "&nbsp;"
     td.xl79 &nbsp;
     td.xl77
   tr.xl77 height="21" style="mso-height-source:userset;height:21.0pt"
@@ -938,10 +933,9 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
     td.xl117 colspan="13"
       span style="mso-spacerun:yes"  &nbsp;
     td.xl75 nº
-    td.xl117 colspan="4"  &nbsp;
+    td.xl117[colspan="4"] == extra[:numero] ? extra[:numero] : "&nbsp;"
     td.xl75 colspan="4" style="mso-ignore:colspan"  Complemento:
-    td.xl81 &nbsp;
-    td.xl117 colspan="7"  &nbsp;
+    td.xl117[colspan="8"] == extra[:complemento] ? extra[:complemento] : "&nbsp;"
     td.xl79 &nbsp;
     td.xl77
   tr.xl77 height="10" style="mso-height-source:userset;height:10.5pt"
@@ -985,7 +979,7 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
     td.xl77
   tr.xl77 height="21" style="mso-height-source:userset;height:21.75pt"
     td.xl72 colspan="6" height="21" style="height:21.75pt"  Bairro:
-    td.xl81 colspan="30"  &nbsp;
+    td.xl81[colspan="30"] == extra[:bairro] ? extra[:bairro] : "&nbsp;"
     td.xl79 &nbsp;
     td.xl77
   tr.xl77 height="10" style="mso-height-source:userset;height:10.5pt"
@@ -1029,13 +1023,13 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
     td.xl77
   tr.xl77 height="21" style="mso-height-source:userset;height:21.0pt"
     td.xl72 colspan="6" height="21" style="height:21.0pt"  Cidade:
-    td.xl81 colspan="15"  &nbsp;
+    td.xl81[colspan="15"] == extra[:cidade] ? extra[:cidade] : "&nbsp;"
     td.xl77
     td.xl82 UF:
-    td.xl81 colspan="2"  &nbsp;
+    td.xl81[colspan="2"] == extra[:uf] ? extra[:uf] : "&nbsp;"
     td.xl77
     td.xl98 colspan="2" style="mso-ignore:colspan"  CEP:
-    td.xl81 colspan="8"  &nbsp;
+    td.xl81[colspan="8"] == extra[:cep] ? extra[:cep] : "&nbsp;"
     td.xl79 &nbsp;
     td.xl77
   tr.xl77 height="10" style="mso-height-source:userset;height:10.5pt"
@@ -1083,12 +1077,12 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
       | Res
       span style="mso-spacerun:yes"  &nbsp;
     td.xl101 &nbsp;
-    td.xl101 colspan="8"  &nbsp;
+    td.xl101[colspan="8"] == extra[:telefone] ? extra[:telefone] : "&nbsp;"
     td.xl101 colspan="2" style="mso-ignore:colspan"
       | Cel
       span style="mso-spacerun:yes"  &nbsp;
     td.xl101 &nbsp;
-    td.xl81 colspan="10"  (54)9993-0982
+    td.xl81[colspan="10"] == extra[:celular] ? extra[:celular] : "&nbsp;"
     td.xl81 &nbsp;
     td.xl81 &nbsp;
     td.xl81 &nbsp;
@@ -1138,7 +1132,7 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
     td.xl77
   tr.xl77 height="21" style="mso-height-source:userset;height:21.0pt"
     td.xl72 colspan="6" height="21" style="height:21.0pt"  Nome Mãe:
-    td.xl81 colspan="30"  &nbsp;
+    td.xl81[colspan="30"] == extra[:mae] ? extra[:mae] : "&nbsp;"
     td.xl79 &nbsp;
     td.xl77
   tr.xl77 height="10" style="mso-height-source:userset;height:10.5pt"
@@ -1182,7 +1176,7 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
     td.xl77
   tr.xl77 height="21" style="mso-height-source:userset;height:21.0pt"
     td.xl72 colspan="6" height="21" style="height:21.0pt"  Nome Pai:
-    td.xl81 colspan="30"  &nbsp;
+    td.xl81[colspan="30"] == extra[:pai] ? extra[:pai] : "&nbsp;"
     td.xl79 &nbsp;
     td.xl77
   tr.xl77 height="10" style="mso-height-source:userset;height:10.5pt"
@@ -1228,17 +1222,17 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
     td.xl72 colspan="6" height="21" style="height:21.0pt"
       | Naturalidade:
       span style="mso-spacerun:yes"  &nbsp;
-    td.xl81 colspan="10"  &nbsp;
+    td.xl81[colspan="10"] == extra[:naturalidade] ? extra[:naturalidade] : "&nbsp;"
     td.xl82 UF:
-    td.xl81 colspan="2"  RS
+    td.xl81[colspan="2"] == extra[:naturalidade_uf] ? extra[:naturalidade_uf] : "&nbsp;"
     td.xl77
     td.xl75 colspan="5" style="mso-ignore:colspan"  Data Nascimento:
     td.xl77
-    td.xl81 colspan="2"  &nbsp;
+    td.xl81[colspan="2"] == extra[:dia_nascimento] ? extra[:dia_nascimento] : "&nbsp;"
     td.xl103 &nbsp;
-    td.xl81 colspan="2"  &nbsp;
+    td.xl81[colspan="2"] == extra[:mes_nascimento] ? extra[:mes_nascimento] : "&nbsp;"
     td.xl103 &nbsp;
-    td.xl81 colspan="4"  &nbsp;
+    td.xl81[colspan="4"] == extra[:ano_nascimento] ? extra[:ano_nascimento] : "&nbsp;"
     td.xl79 &nbsp;
     td.xl77
   tr.xl77 height="10" style="mso-height-source:userset;height:10.5pt"
@@ -1282,11 +1276,11 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
     td.xl77
   tr.xl77 height="21" style="mso-height-source:userset;height:21.0pt"
     td.xl72 colspan="6" height="21" style="height:21.0pt"  Raça:
-    td.xl81 colspan="13"  &nbsp;
+    td.xl81[colspan="13"] == extra[:raca] ? extra[:raca] : "&nbsp;"
     td.xl77
     td.xl82 colspan="3"  Sexo:
     td.xl75 F
-    td.xl80 &nbsp;
+    td.xl80[style="text-align: center"] == extra[:sexo] == 'F' ? 'X' : "&nbsp;"
     td.xl77
     td.xl77
     td.xl77
@@ -1342,13 +1336,13 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
   tr.xl77 height="21" style="mso-height-source:userset;height:21.0pt"
     td.xl72 colspan="6" height="21" style="height:21.0pt"  Estado Civil:
     td.xl81 colspan="13"
-      | SOLTEIRO
+      == extra[:estado_civil] ? extra[:estado_civil] : "&nbsp;"
       span style="mso-spacerun:yes"  &nbsp;
     td.xl77
     td.xl82 colspan="2"
     td.xl77
     td.xl75 M
-    td.xl122 &nbsp;
+    td.xl122[style="text-align: center"] == extra[:sexo] == 'M' ? 'X' : "&nbsp;"
     td.xl77
     td.xl77
     td.xl77
@@ -1443,12 +1437,12 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
   tr.xl77 height="21" style="mso-height-source:userset;height:21.0pt"
     td.xl84 height="21" style="height:21.0pt"  &nbsp;
     td.xl112 colspan="5"
-      | N¼ Job:
+      | Nº Job:
       span style="mso-spacerun:yes"  &nbsp;
-    td.xl87 colspan="6"  &nbsp;
+    td.xl87[colspan="6"] == extra[:job_number] ? extra[:job_number] : "&nbsp;"
     td.xl85 &nbsp;
     td.xl116 colspan="4"  Nome JOB:
-    td.xl87 colspan="18"  &nbsp;
+    td.xl87[colspan="18"] == extra[:job_name] ? extra[:job_name] : "&nbsp;"
     td.xl88 &nbsp;
     td.xl79 &nbsp;
     td.xl77
@@ -1494,10 +1488,10 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
   tr.xl77 height="21" style="mso-height-source:userset;height:21.0pt"
     td.xl84 height="21" style="height:21.0pt"  &nbsp;
     td.xl112 colspan="5"  Supervisor:
-    td.xl87 colspan="13"  ARIANE TANISE MARCHI
+    td.xl87[colspan="13"] == extra[:supervisor] ? extra[:supervisor] : "&nbsp;"
     td.xl85 &nbsp;
     td.xl76 colspan="2" style="mso-ignore:colspan"  Praça:
-    td.xl87 colspan="13"  PORTO ALEGRE
+    td.xl87[colspan="13"] == extra[:praca] ? extra[:praca] : "&nbsp;"
     td.xl88 &nbsp;
     td.xl79 &nbsp;
     td.xl77
@@ -1581,7 +1575,7 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
     td.xl77
   tr.xl77 height="21" style="mso-height-source:userset;height:21.0pt"
     td.xl72 colspan="6" height="21" style="height:21.0pt"  Nacionalidade:
-    td.xl81 colspan="13"  &nbsp;
+    td.xl81[colspan="13"] == extra[:nacionalidade] ? extra[:nacionalidade] : "&nbsp;"
     td.xl77
     td.xl75
     td.xl77
@@ -1644,7 +1638,7 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
     td.xl72 colspan="6" height="21" style="height:21.0pt"  Tem PIS?
     td.xl75 SIM
     td.xl75
-    td.xl123 &nbsp;
+    td.xl123 == extra[:have_pis] == true ? 'X' : "&nbsp;"
     td.xl77
     td.xl75
     td.xl75
@@ -1657,7 +1651,7 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
     td.xl75 colspan="4" style="mso-ignore:colspan"  Contratado:
     td.xl75 colspan="3" style="mso-ignore:colspan"  Temporário
     td.xl75
-    td.xl123 &nbsp;
+    td.xl123[style="text-align: center"] == extra[:temporario] ? 'X' : "&nbsp;"
     td.xl75
     td.xl77
     td.xl77
@@ -1718,7 +1712,7 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
     td.xl75 colspan="2" style="mso-ignore:colspan"
       | Não
       span style="mso-spacerun:yes"  &nbsp;
-    td.xl80 &nbsp;
+    td.xl80 == extra[:have_pis] == false ? 'X' : "&nbsp;"
     td.xl77
     td.xl75
     td.xl75
@@ -1735,7 +1729,7 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
     td.xl77
     td.xl77
     td.xl82 colspan="2" style=("border-right:1.0pt solid black")  CLT
-    td.xl122 style="border-left:none"  &nbsp;
+    td.xl122[style="border-left:none; text-align: center"] == extra[:clt] ? 'X' : "&nbsp;"
     td.xl75
     td.xl77
     td.xl82
@@ -1788,7 +1782,7 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
     td.xl77
   tr.xl77 height="21" style="mso-height-source:userset;height:21.0pt"
     td.xl72 colspan="6" height="21" style="height:21.0pt"  Grau de Instrução:
-    td.xl81 colspan="30"  &nbsp;
+    td.xl81[colspan="30"] == extra[:grau_instrucao] ? extra[:grau_instrucao] : "&nbsp;"
     td.xl79 &nbsp;
     td.xl77
   tr.xl77 height="10" style="mso-height-source:userset;height:10.5pt"
@@ -1873,21 +1867,16 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
     td.xl84 height="21" style="height:21.0pt"  &nbsp;
     td.xl76 colspan="4" style="mso-ignore:colspan"  Data Admissão:
     td.xl85 &nbsp;
-    td.xl87 &nbsp;
-    td.xl87 &nbsp;
+    td.xl87[colspan="2" style="text-align: center"] == extra[:dia_admissao] ? extra[:dia_admissao] : "&nbsp;"
     td.xl104 &nbsp;
-    td.xl87 &nbsp;
-    td.xl87 &nbsp;
+    td.xl87[colspan="2" style="text-align: center"] == extra[:mes_admissao] ? extra[:mes_admissao] : "&nbsp;"
     td.xl104 &nbsp;
-    td.xl87 &nbsp;
-    td.xl87 &nbsp;
-    td.xl87 &nbsp;
-    td.xl87 &nbsp;
+    td.xl87[colspan="4" style="text-align: center"] == extra[:ano_admissao] ? extra[:ano_admissao] : "&nbsp;"
     td.xl85 &nbsp;
     td.xl85 &nbsp;
     td.xl76 colspan="2" style="mso-ignore:colspan"  Salário:
     td.xl85 &nbsp;
-    td.xl107 colspan="4"  R$         950,00
+    td.xl107[colspan="4"] == extra[:salario] ? extra[:salario] : "&nbsp;"
     td.xl102 &nbsp;
     td.xl102 &nbsp;
     td.xl102 &nbsp;
@@ -1981,11 +1970,11 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
     td.xl77
   tr.xl77 height="21" style="mso-height-source:userset;height:21.0pt"
     td.xl72 colspan="6" height="21" style="height:21.0pt"  Banco:
-    td.xl81 colspan="13"  &nbsp;
+    td.xl81[colspan="13"] == extra[:banco] ? extra[:banco] : "&nbsp;"
     td.xl77
     td.xl75
     td.xl121 colspan="3"  Agência:
-    td.xl81 colspan="12"  &nbsp;
+    td.xl81[colspan="12"] == extra[:agencia] ? extra[:agencia] : "&nbsp;"
     td.xl79 &nbsp;
     td.xl77
   tr.xl77 height="10" style="mso-height-source:userset;height:10.5pt"
@@ -2029,13 +2018,13 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
     td.xl77
   tr.xl77 height="21" style="mso-height-source:userset;height:21.0pt"
     td.xl72 colspan="6" height="21" style=("border-right:1.0pt solid black; height:21.0pt")  Conta Corrente
-    td.xl122 style="border-left:none"  &nbsp;
+    td.xl122[style="border-left:none; text-align: center"] == extra[:conta_corrente] ? 'X' : "&nbsp;"
     td.xl77
     td.xl77
     td.xl121 colspan="5" style=("border-right:1.0pt solid black")
       | Conta
       | Poupança
-    td.xl122 style="border-left:none"  &nbsp;
+    td.xl122[style="border-left:none; text-align: center"] == extra[:conta_poupanca] ? 'X' : "&nbsp;"
     td.xl77
     td.xl77
     td.xl77
@@ -2043,7 +2032,7 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
     td.xl77
     td.xl77
     td.xl121 colspan="3"  Conta:
-    td.xl81 colspan="12"  &nbsp;
+    td.xl81[colspan="12"] == extra[:conta] ? extra[:conta] : "&nbsp;"
     td.xl79 &nbsp;
     td.xl77
   tr.xl77 height="10" style="mso-height-source:userset;height:10.5pt"
@@ -2149,10 +2138,10 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
     td.xl77
     td.xl121 colspan="4"  Tem Flhos?
     td.xl121 colspan="2" style=("border-right:1.0pt solid black")  SIM
-    td.xl123 style="border-left:none"  &nbsp;
+    td.xl123[style="border-left:none; text-align: center"] == extra[:filhos] && extra[:filhos].to_i > 0 ? 'X' : "&nbsp;"
     td.xl77
     td.xl121 colspan="3"  Quantos?
-    td.xl81 colspan="3"  &nbsp;
+    td.xl81[colspan="3"] == extra[:filhos] && extra[:filhos].to_i > 0 ? extra[:filhos] : "&nbsp;"
     td.xl79 &nbsp;
     td.xl77
   tr.xl77 height="5" style="mso-height-source:userset;height:5.25pt"
@@ -2196,11 +2185,11 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
     td.xl77
   tr.xl77 height="21" style="mso-height-source:userset;height:21.75pt"
     td.xl72 colspan="6" height="21" style="height:21.75pt"  Cargo:
-    td.xl105 colspan="20"  promotor de vendas
+    td.xl105[colspan="20"] == extra[:cargo] ? extra[:cargo] : "&nbsp;"
     td.xl121 colspan="2" style=("border-right:1.0pt solid black")
       | Não
       span style="mso-spacerun:yes"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
+    td.xl80[style="border-left:none; text-align: center"] == extra[:filhos] == false || extra[:filhos] == 0 ? 'X' : "&nbsp;"
     td.xl77
     td.xl77
     td.xl77
@@ -2251,14 +2240,14 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
     td.xl77
   tr.xl77 height="21" style="mso-height-source:userset;height:21.75pt"
     td.xl72 colspan="6" height="21" style="height:21.75pt"  Nº Cart. Trabalho:
-    td.xl81 colspan="10"  &nbsp;
+    td.xl81[colspan="10"] == extra[:carteira_de_trabalho] ? extra[:carteira_de_trabalho] : "&nbsp;"
     td.xl77
     td.xl77
     td.xl121 colspan="3"  Série:
-    td.xl81 colspan="7"  &nbsp;
+    td.xl81[colspan="7"] == extra[:serie] ? extra[:serie] : "&nbsp;"
     td.xl77
     td.xl121 colspan="3"  Estado:
-    td.xl81 colspan="2"  &nbsp;
+    td.xl81[colspan="2"] == extra[:carteira_uf] ? extra[:carteira_uf] : "&nbsp;"
     td.xl77
     td.xl77
     td.xl79 &nbsp;
@@ -2304,11 +2293,11 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
     td.xl77
   tr.xl77 height="21" style="mso-height-source:userset;height:21.75pt"
     td.xl72 colspan="6" height="21" style="height:21.75pt"  Data expedição:
-    td.xl81 colspan="2"  &nbsp;
+    td.xl81[colspan="2"] == extra[:dia_carteira] ? extra[:dia_carteira] : "&nbsp;"
     td.xl103 &nbsp;
-    td.xl81 colspan="2"  &nbsp;
+    td.xl81[colspan="2"] == extra[:mes_carteira] ? extra[:mes_carteira] : "&nbsp;"
     td.xl103 &nbsp;
-    td.xl81 colspan="4"  &nbsp;
+    td.xl81[colspan="4"] == extra[:ano_carteira] ? extra[:ano_carteira] : "&nbsp;"
     td.xl77
     td.xl77
     td.xl77
@@ -2372,18 +2361,18 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
     td.xl77
   tr.xl77 height="21" style="mso-height-source:userset;height:21.75pt"
     td.xl72 colspan="6" height="21" style=("border-right:1.0pt solid black; height:21.75pt")  CPF:
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl94 style="border-left:none"  &nbsp;
+    td.xl80[style="border-left:none; text-align: center"] == extra[:cpf] ? extra[:cpf].to_s[0] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:cpf] ? extra[:cpf].to_s[1] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:cpf] ? extra[:cpf].to_s[2] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:cpf] ? extra[:cpf].to_s[3] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:cpf] ? extra[:cpf].to_s[4] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:cpf] ? extra[:cpf].to_s[5] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:cpf] ? extra[:cpf].to_s[6] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:cpf] ? extra[:cpf].to_s[7] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:cpf] ? extra[:cpf].to_s[8] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:cpf] ? extra[:cpf].to_s[9] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:cpf] ? extra[:cpf].to_s[10] : "&nbsp;"
+    td.xl94[style="border-left:none"] &nbsp;
     td.xl77
     td.xl77
     td.xl77
@@ -2445,30 +2434,30 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
     td.xl77
   tr.xl77 height="21" style="mso-height-source:userset;height:21.75pt"
     td.xl72 colspan="6" height="21" style=("border-right:1.0pt solid black; height:21.75pt")  Título:
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
+    td.xl80[style="border-left:none; text-align: center"] == extra[:titulo] ? extra[:titulo].to_s[0] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:titulo] ? extra[:titulo].to_s[1] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:titulo] ? extra[:titulo].to_s[2] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:titulo] ? extra[:titulo].to_s[3] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:titulo] ? extra[:titulo].to_s[4] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:titulo] ? extra[:titulo].to_s[5] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:titulo] ? extra[:titulo].to_s[6] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:titulo] ? extra[:titulo].to_s[7] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:titulo] ? extra[:titulo].to_s[8] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:titulo] ? extra[:titulo].to_s[9] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:titulo] ? extra[:titulo].to_s[10] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:titulo] ? extra[:titulo].to_s[11] : "&nbsp;"
     td.xl120 colspan="2" style=("border-right:1.0pt solid black;border-left: none")  Zona
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
+    td.xl80[style="border-left:none; text-align: center"] == extra[:zona] ? extra[:zona].to_s[0] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:zona] ? extra[:zona].to_s[1] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:zona] ? extra[:zona].to_s[2] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:zona] ? extra[:zona].to_s[3] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:zona] ? extra[:zona].to_s[4] : "&nbsp;"
     td.xl77
     td.xl121 colspan="2" style=("border-right:1.0pt solid black")  Seção
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
+    td.xl80[style="border-left:none; text-align: center"] == extra[:secao] ? extra[:secao].to_s[0] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:secao] ? extra[:secao].to_s[1] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:secao] ? extra[:secao].to_s[2] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:secao] ? extra[:secao].to_s[3] : "&nbsp;"
     td.xl77
     td.xl77
     td.xl77
@@ -2516,25 +2505,25 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
     td.xl77
   tr.xl77 height="21" style="mso-height-source:userset;height:21.75pt"
     td.xl72 colspan="6" height="21" style=("border-right:1.0pt solid black; height:21.75pt")  RG:
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
+    td.xl80[style="border-left:none; text-align: center"] == extra[:rg] ? extra[:rg].to_s[0] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:rg] ? extra[:rg].to_s[1] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:rg] ? extra[:rg].to_s[2] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:rg] ? extra[:rg].to_s[3] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:rg] ? extra[:rg].to_s[4] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:rg] ? extra[:rg].to_s[5] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:rg] ? extra[:rg].to_s[6] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:rg] ? extra[:rg].to_s[7] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:rg] ? extra[:rg].to_s[8] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:rg] ? extra[:rg].to_s[9] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:rg] ? extra[:rg].to_s[10] : "&nbsp;"
     td.xl77
     td.xl75 colspan="4" style="mso-ignore:colspan"  Data expedição
     td.xl75
-    td.xl81 colspan="2"  &nbsp;
+    td.xl81[colspan="2" style="text-align: center"] == extra[:dia_expedicao] ? extra[:dia_expedicao] : "&nbsp;"
     td.xl103 &nbsp;
-    td.xl81 colspan="2"  &nbsp;
+    td.xl81[colspan="2" style="text-align: center"] == extra[:mes_expedicao] ? extra[:mes_expedicao] : "&nbsp;"
     td.xl103 &nbsp;
-    td.xl81 colspan="4"  &nbsp;
+    td.xl81[colspan="4" style="text-align: center"] == extra[:ano_expedicao] ? extra[:ano_expedicao] : "&nbsp;"
     td.xl77
     td.xl77
     td.xl77
@@ -2581,10 +2570,10 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
     td.xl77
   tr.xl77 height="21" style="mso-height-source:userset;height:21.75pt"
     td.xl72 colspan="6" height="21" style="height:21.75pt"  Órgão Emissor:
-    td.xl81 colspan="3"  SSP
+    td.xl81[colspan="3" style="text-align: center"] == extra[:orgao_emissor] ? extra[:orgao_emissor] : "&nbsp;"
     td.xl77
     td.xl73 colspan="3"  Estado:
-    td.xl81 colspan="2"  RS
+    td.xl81[colspan="2" style="text-align: center"] == extra[:estado_emissor] ? extra[:estado_emissor] : "&nbsp;"
     td.xl77
     td.xl77
     td.xl77
@@ -2649,17 +2638,17 @@ table border="0" cellpadding="0" cellspacing="0" style=("border-collapse: collap
     td.xl77
   tr.xl77 height="21" style="mso-height-source:userset;height:21.75pt"
     td.xl72 colspan="6" height="21" style=("border-right:1.0pt solid black; height:21.75pt")  PIS:
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
-    td.xl80 style="border-left:none"  &nbsp;
+    td.xl80[style="border-left:none; text-align: center"] == extra[:pis] ? extra[:pis].to_s[0] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:pis] ? extra[:pis].to_s[1] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:pis] ? extra[:pis].to_s[2] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:pis] ? extra[:pis].to_s[3] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:pis] ? extra[:pis].to_s[4] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:pis] ? extra[:pis].to_s[5] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:pis] ? extra[:pis].to_s[6] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:pis] ? extra[:pis].to_s[7] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:pis] ? extra[:pis].to_s[8] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:pis] ? extra[:pis].to_s[9] : "&nbsp;"
+    td.xl80[style="border-left:none; text-align: center"] == extra[:pis] ? extra[:pis].to_s[10] : "&nbsp;"
     td.xl77
     td.xl77
     td.xl77
